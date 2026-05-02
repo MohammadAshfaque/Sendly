@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0e1112;
+  overflow-x: hidden;
+}
+
+@keyframes travel {
+  0%   { left: -8px; opacity: 0; }
+  8%   { opacity: 1; }
+  80%  { left: 100%; opacity: 1; }
+  81%  { left: 100%; opacity: 0; }
+  100% { left: -8px; opacity: 0; }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes bob2 {
+  0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+  50%       { transform: translateY(-11px) rotate(1.5deg); }
+}
+
+@keyframes prog {
+  from { width: 0; }
+  to   { width: 70%; }
+}
+
+.panim {
+  animation: prog 1.4s 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
